@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,9 +309,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1714357782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 381.79446
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000019073486
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2581.0078
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5294379194629570511, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca5183455f334fa4bafa5a0d4423f8f8, type: 2}
+    - target: {fileID: -3051844811787204041, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3df4f41520dfeb04a89cdb174b6e7d70, type: 2}
+    - target: {fileID: -500006812648891723, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca5183455f334fa4bafa5a0d4423f8f8, type: 2}
+    - target: {fileID: 919132149155446097, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Name
+      value: Peach's Castle Interior
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611284538686852682, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3df4f41520dfeb04a89cdb174b6e7d70, type: 2}
+    - target: {fileID: 6622795191974828478, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3df4f41520dfeb04a89cdb174b6e7d70, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 086c001a854479e478476361f8da7bbb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1510106148}
   - {fileID: 1060923172}
+  - {fileID: 1714357782}
