@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Peach's Castle Interior
       objectReference: {fileID: 0}
+    - target: {fileID: 922452267127295377, guid: 086c001a854479e478476361f8da7bbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d9835248671e494ba18785451c5e99f, type: 2}
     - target: {fileID: 6611284538686852682, guid: 086c001a854479e478476361f8da7bbb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
