@@ -37,6 +37,7 @@ namespace StarterAssets
 		public void OnJump(InputValue value)
 		{
 			JumpInput(value.isPressed);
+			Debug.Log("yoooo");
 		}
 
 		public void OnSprint(InputValue value)
@@ -75,6 +76,15 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-	}
+
+        public void OnCollisionEnter(Collision collision)
+        {
+			Debug.Log("hitting" +collision.gameObject.name);
+        }
+        public void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("hitting" + other.gameObject.name);
+        }
+    }
 	
 }
