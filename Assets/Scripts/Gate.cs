@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gate : MonoBehaviour
 {
@@ -24,18 +25,28 @@ public class Gate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        animator.Play("door open");
-        Debug.Log("just opened the door");
+        if (other.tag == "Player")
+        {
+            animator.Play("door open");
+            Debug.Log("just opened the door");
+            Debug.Log("hittting " + other.name);
+            Invoke("Transition", 3f);
+        }
+    }
+    private void Transition()
+    {
+        
+        SceneManager.LoadScene(1);
         
     }
-    private void OnTriggerExit(Collider other)
-    {
-        animator.Play("close");
-    }
-    public void OnPowerUp()
-    {
-        Debug.Log("open door");
-        animator.Play("open");
-    }
+   // private void OnTriggerExit(Collider other)
+    //{
+     //   animator.Play("close");
+    //}
+   // public void OnPowerUp()
+    //{
+        //Debug.Log("open door");
+        //animator.Play("open");
+    //}
    
 }

@@ -19,10 +19,10 @@ public class KeySpin : MonoBehaviour
         transform.Rotate(speed * Time.deltaTime * Vector3.forward);
         // Find all gates and subscribe them to the powerUp event
         Gate[] gates = FindObjectsOfType<Gate>();
-        foreach (Gate gate in gates)
-        {
-            powerUp.AddListener(gate.OnPowerUp);
-        }
+       // foreach (Gate gate in gates)
+       // {
+            //powerUp.AddListener(gate.OnPowerUp);
+       // }
     }
 
     private void OnTriggerEnter(Collider other)
