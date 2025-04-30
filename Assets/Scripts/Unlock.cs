@@ -21,7 +21,7 @@ public class Unlock : MonoBehaviour
             PlayerInventory inventory = other.GetComponent<PlayerInventory>();
             if (inventory != null && inventory.hasKey)
             {
-                animator.Play("door open");
+                animator.Play("gate open");
                 UnlockGate();
                 Debug.Log("just opened the door");
             }
