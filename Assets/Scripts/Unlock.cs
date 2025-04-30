@@ -4,32 +4,30 @@ using UnityEngine;
 
 public class Unlock : MonoBehaviour
 {
-    Animator animator;
+    private Animator animator;
     public bool isUnlocked = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         animator = GetComponent<Animator>();
-
-        GameObject obj = GameObject.FindGameObjectWithTag("Player");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        animator.Play("door open");
-        Debug.Log("just opened the door");
+        if (isUnlocked) return;
+
         if (other.CompareTag("Player"))
         {
             PlayerInventory inventory = other.GetComponent<PlayerInventory>();
             if (inventory != null && inventory.hasKey)
             {
+                animator.Play("door open");
                 UnlockGate();
+                Debug.Log("just opened the door");
+            }
+            else
+            {
+                Debug.Log("You need a key to open this door.");
             }
         }
     }
@@ -38,6 +36,8 @@ public class Unlock : MonoBehaviour
     {
         isUnlocked = true;
         Debug.Log("Gate unlocked!");
-        gameObject.SetActive(false); // Disables the gate; you can replace this with an animation
+        // Optionally disable collider if you don’t want it to trigger again:
+        // GetComponent<Collider>().enabled = false;
     }
 }
+

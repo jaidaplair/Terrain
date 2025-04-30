@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class Gate : MonoBehaviour
 {
     Animator animator;
+    public AudioClip sound;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         GameObject obj = GameObject.FindGameObjectWithTag("Player");
         // if (obj != null )
@@ -27,7 +30,9 @@ public class Gate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+
             animator.Play("door open");
+            audioSource.PlayOneShot(sound);
             Debug.Log("just opened the door");
             Debug.Log("hittting " + other.name);
             Invoke("Transition", 3f);

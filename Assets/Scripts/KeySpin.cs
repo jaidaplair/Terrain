@@ -31,7 +31,9 @@ public class KeySpin : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            powerUp.Invoke(); // Open all gates
+            // powerUp.Invoke(); // Open all gates
+
+            Debug.Log("got key");
             Destroy(gameObject); // Remove the coin after activation
         }
     }

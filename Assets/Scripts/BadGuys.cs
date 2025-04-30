@@ -4,18 +4,59 @@ using UnityEngine;
 
 public class BadGuys : MonoBehaviour
 {
-    [SerializeField] Transform ObjectToLookAT;
-    // Start is called before the first frame update
+    [SerializeField] private Transform player;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float stunDuration = 3f; // How long bad guys stay stunned
+    private Animator animator;
+    private bool isStunned = false;
+
+    public AudioClip hurtSound;
+
     void Start()
     {
-
+        animator = GetComponent<Animator>();
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform; // Find the player
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 lookVector = new Vector3(ObjectToLookAT.position.x, transform.position.y, ObjectToLookAT.position.z);
-        transform.LookAt(ObjectToLookAT);
+        if (!isStunned)
+        {
+            PursuePlayer();
+        }
+    }
 
+    void PursuePlayer()
+    {
+        // Make the bad guy look at the player
+        Vector3 direction = player.position - transform.position;
+        direction.y = 0; // Keep it on the XZ plane (no looking up or down)
+        transform.LookAt(player.position);
+
+        // Move towards the player
+        //transform.Translate(direction.normalized * moveSpeed * Time.deltaTime, Space.World);
+    }
+
+    // Call this method when the bad guy gets hit by the player's weapon
+    public void GetStunned()
+    {
+        if (!isStunned)
+        {
+            isStunned = true;
+            animator.SetTrigger("Stun"); // Play the stun animation
+            AudioSource.PlayClipAtPoint(hurtSound, transform.position); // Play hurt sound
+            StartCoroutine(RecoverFromStun());
+        }
+    }
+
+    IEnumerator RecoverFromStun()
+    {
+        yield return new WaitForSeconds(stunDuration); // Wait for the stun duration
+        animator.SetTrigger("Recover"); // Play recovery animation
+        isStunned = false;
     }
 }
+

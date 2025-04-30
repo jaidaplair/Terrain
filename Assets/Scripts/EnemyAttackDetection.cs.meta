@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: e9822708ea901c14c907a6ce005381a1
+guid: 661227030028e6e43b3ff59f302db179
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - player: {instanceID: 0}
-  - hurtSound: {fileID: 8300000, guid: dbabe6087bbc0c449a14f0c6b05e53af, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

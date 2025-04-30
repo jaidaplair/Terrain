@@ -10,3 +10,9 @@
 //https://www.mixamo.com/#/?page=1&type=Character
 //axe
 //https://sketchfab.com/3d-models/medieval-axe-4f44adf8b1ad461bbda0008ec2ac4343
+//door open sound
+//https://freesound.org/people/pagancow/sounds/15419/https://freesound.org/people/pagancow/sounds/15419/
+//axe sound
+//https://freesound.org/people/ErikCruzDev/sounds/735900/
+//enemey sound
+//https://freesound.org/people/horizon7006/sounds/799283/
