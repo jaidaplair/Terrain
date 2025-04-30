@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,7 +33,7 @@ public class Gate : MonoBehaviour
         {
 
             animator.Play("door open");
-            audioSource.PlayOneShot(sound);
+            AudioSource.PlayClipAtPoint(sound, transform.position);
             Debug.Log("just opened the door");
             Debug.Log("hittting " + other.name);
             Invoke("Transition", 3f);

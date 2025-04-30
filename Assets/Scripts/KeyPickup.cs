@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KeyPickup : MonoBehaviour
 {
+    public AudioClip ding;
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -12,7 +14,9 @@ public class KeyPickup : MonoBehaviour
             if (inventory != null)
             {
                 inventory.hasKey = true;
-                Destroy(gameObject); // Remove key from scene
+                AudioSource.PlayClipAtPoint(ding, transform.position); // Play attack sound
+            
+            Destroy(gameObject); // Remove key from scene
             }
         }
     }

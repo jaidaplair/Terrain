@@ -11,9 +11,13 @@ public class BadGuys : MonoBehaviour
     private bool isStunned = false;
 
     public AudioClip hurtSound;
+    //public AudioClip audioSource;
+
+
 
     void Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         if (player == null)
         {
@@ -27,6 +31,7 @@ public class BadGuys : MonoBehaviour
         {
             PursuePlayer();
         }
+       
     }
 
     void PursuePlayer()
@@ -46,8 +51,10 @@ public class BadGuys : MonoBehaviour
         if (!isStunned)
         {
             isStunned = true;
-            animator.SetTrigger("Stun"); // Play the stun animation
+            animator.SetTrigger("stunned"); // Play the stun animation
+            animator.Play("stunned");
             AudioSource.PlayClipAtPoint(hurtSound, transform.position); // Play hurt sound
+            
             StartCoroutine(RecoverFromStun());
         }
     }
